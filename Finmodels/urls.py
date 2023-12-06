@@ -14,13 +14,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
-from finmodapp.views import upload_file
-from .views import upload_file
+from django.urls import path, include
+
 
 urlpatterns = [
     # ... other url patterns ...
-    path('upload/', upload_file, name='upload_file'),
+    path('finmodapp/', include('findmodapp.urls'))
 ]
 from django.conf import settings
 from django.conf.urls.static import static
