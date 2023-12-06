@@ -15,7 +15,6 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from finmodapp.views import upload_file
 from .views import upload_file
 
 urlpatterns = [

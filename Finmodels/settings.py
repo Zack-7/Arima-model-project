@@ -132,8 +132,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
-import pandas as pd
-# ... inside the upload_file view, after saving the file ...
-df = pd.read_csv(os.path.join(MEDIA_ROOT, uploaded_file.name))
-# Perform preprocessing here (e.g., handling missing values)
 
