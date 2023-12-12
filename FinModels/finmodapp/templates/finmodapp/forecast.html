@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forecast</title>
+</head>
+<body>
+    <h1>ARIMA Model Forecast</h1>
+    <div>
+        {% if plot_url %}
+            <img src="{{ plot_url }}" alt="ARIMA Model Forecast">
+        {% else %}
+            <p>Forecast not available yet. Please upload a CSV file first.</p>
+        {% endif %}
+    </div>
+    <a href="{% url 'upload_file' %}">Back to Upload</a>
+</body>
+</html>

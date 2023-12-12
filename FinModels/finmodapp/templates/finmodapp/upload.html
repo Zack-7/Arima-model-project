@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ARIMA Model Forecasting</title>
+    <!-- Add your existing styles here -->
+</head>
+<body>
+    <h1>ARIMA Model Forecasting</h1>
+    <h2>Upload CSV File</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <label for="target_column">Target Column:</label>
+        <input type="text" id="target_column" name="target_column" required>
+        <button type="submit">Upload</button>
+    </form>
+    <a href="{% url 'generate_forecast' %}">Go to Forecast</a>
+    <!-- Add your existing elements here -->
+</body>
+</html>
